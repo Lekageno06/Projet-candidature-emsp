@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #172333;
+  background: #f4f7fb;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.contact-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(280px, 36%) 1fr;
+  background: #fff;
+}
+
+.contact-brand {
+  display: flex;
+  align-items: center;
+  padding: 48px;
+  color: #fff;
+  background: #2864e6;
+}
+
+.brand-content {
+  max-width: 440px;
+}
+
+.brand-icon,
+.contact-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 24px;
+}
+
+.brand-content h1 {
+  margin: 22px 0 8px;
+  font-size: 27px;
+}
+
+.brand-subtitle {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.brand-features {
+  display: grid;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.brand-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-main {
+  min-width: 0;
+  padding: 18px clamp(20px, 5vw, 72px) 48px;
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e4e9f0;
+}
+
+.main-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border-radius: 6px;
+  color: #526174;
+  text-decoration: none;
+}
+
+.main-nav-link:hover,
+.main-nav-link.active {
+  color: #1749b5;
+  background: #edf3ff;
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: 56px auto 0;
+}
+
+.contact-header {
+  margin-bottom: 32px;
+}
+
+.contact-header h2 {
+  margin-bottom: 8px;
+  font-size: 30px;
+}
+
+.contact-header p,
+.contact-label {
+  color: #617083;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(300px, 1.2fr);
+  gap: 44px;
+}
+
+.contact-information h3,
+.contact-form-card h3 {
+  margin: 0 0 22px;
+  font-size: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 22px 0;
+}
+
+.contact-icon {
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  color: #2864e6;
+  background: #edf3ff;
+}
+
+.contact-label,
+.contact-value {
+  display: block;
+}
+
+.contact-value {
+  margin-top: 4px;
+  color: #172333;
+  text-decoration: none;
+}
+
+.contact-form-card {
+  padding: 26px;
+  border: 1px solid #e0e6ef;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.contact-form-card .form-group {
+  margin-bottom: 16px;
+}
+
+.contact-form-card label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.contact-form-card .form-control {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd4e0;
+  border-radius: 5px;
+  font: inherit;
+}
+
+.contact-form-card .form-control:focus {
+  outline: 2px solid #b9d0ff;
+  border-color: #2864e6;
+}
+
+.btn-send {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  background: #2864e6;
+  font: inherit;
+  cursor: pointer;
+}
+
+.btn-send:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+@media (max-width: 800px) {
+  .contact-page {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-brand {
+    padding: 32px 24px;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .contact-container {
+    margin-top: 32px;
+  }
+}

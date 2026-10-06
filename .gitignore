@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+back-end/.env
+back-end/uploads/
+back-end/.venv/
+back_end/.env
+back_end/uploads/
+back_end/.venv/
+.venv/
+comptes_test.txt

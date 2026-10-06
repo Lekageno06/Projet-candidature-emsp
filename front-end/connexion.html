@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#151817" />
+    <title>Connexion | EMSP Abidjan</title>
+    <link rel="icon" type="image/jpeg" href="/assets/emsp-logo.jfif" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/connexion.css" />
+    <link rel="stylesheet" href="css/intro.css" />
+    <link rel="stylesheet" href="css/page-loader.css" />
+    <link rel="stylesheet" href="css/chatbot.css" />
+  </head>
+  <body>
+    <div id="emspPageLoader" aria-label="Chargement de la plateforme">
+      <div class="page-loader-content"><svg class="page-loader-ring" viewBox="0 0 94 94" aria-hidden="true"><circle cx="47" cy="47" r="44" /></svg><img class="page-loader-logo" src="/assets/emsp-logo.jfif" alt="Logo EMSP" /><div class="page-loader-title">EMSP</div></div>
+    </div>
+    <div id="introOverlay" class="intro-overlay" aria-label="Introduction de la plateforme EMSP">
+      <canvas id="introBackground" aria-hidden="true"></canvas><div class="intro-glow" aria-hidden="true"></div><div id="introProgress"></div>
+      <button id="introSkip" class="intro-skip" type="button">PASSER L'INTRO ›</button>
+      <section class="intro-scene is-active" data-intro-scene="0" aria-label="Bienvenue">
+        <div class="intro-badge"><svg viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="70" /></svg><img src="/assets/emsp-logo.jfif" alt="Logo EMSP" /></div>
+        <div class="intro-emsp"><span>E</span><span>M</span><span>S</span><span>P</span></div>
+        <div class="intro-name">ÉCOLE MULTINATIONALE SUPÉRIEURE DES POSTES</div><div class="intro-tag">pour une Poste Sans Frontières</div>
+      </section>
+      <section class="intro-scene" data-intro-scene="1" aria-label="Les étapes de votre parcours">
+        <div class="intro-kicker">PLATEFORME EN LIGNE</div><h2>Votre admission, en trois étapes</h2>
+        <div class="intro-steps">
+          <div class="intro-step"><i><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 12v6M9 15h6"/></svg></i><b>ÉTAPE 01</b><h3>Postulez en ligne</h3><p>Renseignez votre identité, votre BAC et vos choix de filière en quelques minutes.</p></div>
+          <div class="intro-step"><i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></i><b>ÉTAPE 02</b><h3>Suivez votre dossier</h3><p>Consultez le statut de votre candidature et téléchargez votre convocation officielle.</p></div>
+          <div class="intro-step"><i><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/></svg></i><b>ÉTAPE 03</b><h3>Découvrez vos résultats</h3><p>Accédez aux résultats du concours avec votre numéro de dossier.</p></div>
+        </div>
+      </section>
+      <div class="intro-foot">EMSP · Plateforme de candidature et résultats</div>
+    </div>
+
+    <main class="login-page">
+      <aside class="login-brand">
+        <div class="brand-content">
+          <a class="brand-home" href="/" aria-label="Retour à l’accueil EMSP">
+            <span class="brand-icon">
+              <img src="/assets/emsp-logo.jfif" alt="Logo EMSP" />
+            </span>
+            <h1>École Multinationale Supérieure des Postes</h1>
+            <p class="brand-subtitle">
+              Former aujourd'hui.<br />Construire demain.
+            </p>
+          </a>
+          <div class="brand-features">
+            <div class="brand-feature">
+              <i class="bi bi-check-circle" aria-hidden="true"></i
+              ><span>Un dossier de candidature en ligne</span>
+            </div>
+            <div class="brand-feature">
+              <i class="bi bi-check-circle" aria-hidden="true"></i
+              ><span>Des formations pour aller plus loin</span>
+            </div>
+            <div class="brand-feature">
+              <i class="bi bi-check-circle" aria-hidden="true"></i
+              ><span>Un espace pour suivre votre parcours</span>
+            </div>
+          </div>
+          <a class="back-home" href="/"
+            >Découvrir l'EMSP
+            <i class="bi bi-arrow-up-right" aria-hidden="true"></i
+          ></a>
+        </div>
+      </aside>
+
+      <section class="login-main">
+        <nav class="main-navigation" aria-label="Navigation principale">
+          <a class="main-nav-link" href="/"
+            ><i class="bi bi-house" aria-hidden="true"></i
+            ><span>Accueil</span></a
+          >
+          <a class="main-nav-link" href="/#formations"
+            ><i class="bi bi-book" aria-hidden="true"></i
+            ><span>Formations</span></a
+          >
+          <a class="main-nav-link" href="/#admission"
+            ><i class="bi bi-signpost-2" aria-hidden="true"></i
+            ><span>Admission</span></a
+          >
+          <a class="main-nav-link" href="/contacts"
+            ><i class="bi bi-envelope" aria-hidden="true"></i
+            ><span>Contact</span></a
+          >
+        </nav>
+
+        <div class="login-container">
+          <div class="login-header">
+            <p class="login-kicker">ESPACE CANDIDAT</p>
+            <h2>Heureux de vous<br /><em>revoir.</em></h2>
+            <p>Connectez-vous pour retrouver votre dossier.</p>
+          </div>
+
+          <form id="loginForm" method="POST" action="/api/auth/login">
+            <p id="registrationClosedMessage" class="reset-message error" hidden>
+              Les inscriptions sont actuellement clôturées par l’administration.
+            </p>
+            <div class="form-group">
+              <label for="identifiant">Email ou numéro de dossier</label>
+              <div class="input-group-custom">
+                <div class="input-icon">
+                  <i class="bi bi-person" aria-hidden="true"></i>
+                </div>
+                <input
+                  type="text"
+                  id="identifiant"
+                  name="identifiant"
+                  class="form-control-custom"
+                  placeholder="email@exemple.ci ou CDT_..."
+                  autocomplete="username"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Mot de passe</label>
+              <div class="input-group-custom">
+                <div class="input-icon">
+                  <i class="bi bi-lock" aria-hidden="true"></i>
+                </div>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="form-control-custom password-input"
+                  autocomplete="current-password"
+                  required
+                />
+                <button
+                  type="button"
+                  id="togglePassword"
+                  class="password-toggle"
+                  aria-label="Afficher le mot de passe"
+                >
+                  <i class="bi bi-eye" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <p class="forgot-password">
+              <a href="#" id="forgotPasswordLink">Mot de passe oublié ?</a>
+              <a href="/contacts">Besoin d'aide ? Contactez-nous</a>
+            </p>
+            <button type="submit" class="btn-login">
+              <i class="bi bi-arrow-right-circle" aria-hidden="true"></i
+              ><span>Se connecter</span>
+            </button>
+          </form>
+
+          <div class="login-separator"></div>
+          <div class="create-account">
+            <p>Vous n'avez pas encore de compte ?</p>
+            <a class="btn-create-account" href="/candidature?inscription=1"
+              ><i class="bi bi-person-plus" aria-hidden="true"></i
+              ><span>Créer mon dossier</span></a
+            >
+          </div>
+        </div>
+        <div class="forgot-modal" id="forgotPasswordModal" hidden>
+          <div class="forgot-modal-backdrop" data-close-forgot></div>
+          <section class="forgot-modal-card" role="dialog" aria-modal="true" aria-labelledby="forgotTitle">
+            <button type="button" class="forgot-close" data-close-forgot aria-label="Fermer">&times;</button>
+            <p class="login-kicker">RÉCUPÉRATION DU COMPTE</p>
+            <h2 id="forgotTitle">Modifier mon<br /><em>mot de passe.</em></h2>
+            <p class="forgot-description">Saisissez votre email ou votre numéro de dossier.</p>
+            <form id="resetPasswordForm">
+              <label for="resetIdentifiant">Email ou numéro de dossier</label>
+              <input id="resetIdentifiant" name="identifiant" type="text" required />
+              <label for="resetAnswer">Question personnelle : quel est votre lieu de naissance ?</label>
+              <input id="resetAnswer" name="reponse_personnelle" type="text" autocomplete="off" required />
+              <label for="resetPassword">Nouveau mot de passe</label>
+              <input id="resetPassword" name="password" type="password" minlength="8" required />
+              <label for="resetConfirmation">Confirmer le mot de passe</label>
+              <input id="resetConfirmation" name="confirmation" type="password" minlength="8" required />
+              <p id="resetMessage" class="reset-message" role="alert" hidden></p>
+              <button type="submit" class="btn-login">Modifier le mot de passe</button>
+            </form>
+          </section>
+        </div>
+        <p class="login-footer">© 2026 EMSP · Abidjan, Côte d'Ivoire</p>
+      </section>
+    </main>
+    <script src="js/connexion.js"></script>
+    <script src="js/intro.js"></script>
+    <script src="js/page-loader.js"></script>
+    <script src="js/chatbot.js"></script>
+  </body>
+</html>

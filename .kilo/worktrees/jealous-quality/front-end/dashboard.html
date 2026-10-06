@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#202921" />
+    <title>Dashboard administrateur | EMSP</title>
+    <link rel="icon" type="image/jpeg" href="/assets/emsp-logo.jfif" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="/css/theme.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <link rel="stylesheet" href="/css/page-loader.css" />
+    <link rel="stylesheet" href="/css/chatbot.css" />
+  </head>
+  <body class="dashboard-page">
+    <div id="emspPageLoader" aria-label="Chargement de la plateforme">
+      <div class="page-loader-content"><svg class="page-loader-ring" viewBox="0 0 94 94" aria-hidden="true"><circle cx="47" cy="47" r="44" /></svg><img class="page-loader-logo" src="/assets/emsp-logo.jfif" alt="Logo EMSP" /><div class="page-loader-title">EMSP</div></div>
+    </div>
+    <header class="dashboard-header">
+      <a class="dashboard-brand" href="/" aria-label="Retour à l’accueil EMSP">
+        <img src="/assets/emsp-logo.jfif" alt="Logo EMSP" />
+        <span>
+          <strong>École Multinationale Supérieure des Postes</strong>
+          <small>ESPACE ADMINISTRATEUR</small>
+        </span>
+      </a>
+      <div class="dashboard-actions">
+        <span class="admin-badge"><i class="bi bi-shield-lock"></i> ADMIN</span>
+        <button type="button" id="logoutButton" class="dashboard-logout">
+          <i class="bi bi-box-arrow-right"></i> Déconnexion
+        </button>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      <section class="dashboard-intro">
+        <p class="dashboard-kicker">PILOTAGE DE LA PLATEFORME</p>
+        <h1>Tableau de bord<br /><em>administrateur.</em></h1>
+        <p>Suivez les candidatures et l’état des dossiers depuis un espace sécurisé.</p>
+      </section>
+
+      <p id="dashboardAlert" class="dashboard-alert" role="alert" hidden></p>
+
+      <section class="stats-grid" aria-label="Indicateurs des candidatures">
+        <article class="stat-card">
+          <i class="bi bi-people"></i>
+          <span>Total des candidatures</span>
+          <strong id="totalCount">—</strong>
+        </article>
+        <article class="stat-card">
+          <i class="bi bi-folder-check"></i>
+          <span>Dossiers validés</span>
+          <strong id="validCount">—</strong>
+        </article>
+        <article class="stat-card stat-card-accent">
+          <i class="bi bi-person-check"></i>
+          <span>Candidats admis</span>
+          <strong id="admittedCount">—</strong>
+        </article>
+        <article class="stat-card">
+          <i class="bi bi-person-x"></i>
+          <span>Candidatures refusées</span>
+          <strong id="rejectedCount">—</strong>
+        </article>
+      </section>
+
+      <section class="dashboard-table-card">
+        <div class="table-heading">
+          <div>
+            <p class="dashboard-kicker">SUIVI RÉCENT</p>
+            <h2>Dernières candidatures</h2>
+          </div>
+          <button type="button" id="refreshButton" class="refresh-button">
+            <i class="bi bi-arrow-clockwise"></i> Actualiser
+          </button>
+        </div>
+        <div class="candidate-toolbar">
+          <input id="candidateSearch" type="search" placeholder="Rechercher par dossier, nom ou email…" />
+          <select id="candidateStatusFilter" aria-label="Filtrer par statut">
+            <option value="">Tous les statuts</option>
+            <option value="en_traitement">En traitement</option>
+            <option value="valide">Validés</option>
+            <option value="rejete">Refusés</option>
+          </select>
+          <a id="exportCandidates" class="refresh-button" href="/api/admin/candidates/export.xlsx" download>
+            <i class="bi bi-file-earmark-excel"></i> Exporter Excel
+          </a>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Dossier</th>
+                <th>Candidat</th>
+                <th>Filière choisie</th>
+                <th>État</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="candidateRows">
+              <tr><td colspan="5" class="table-empty">Chargement des candidatures…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="admin-create-card" id="adminManagement">
+        <div>
+          <p class="dashboard-kicker">GESTION DES ACCÈS</p>
+          <h2>Ajouter un administrateur</h2>
+          <p>Seul un administrateur connecté peut créer un nouvel accès.</p>
+        </div>
+        <form id="adminForm" class="admin-form">
+          <input name="nom" type="text" placeholder="Nom de l’administrateur" required />
+          <input name="email" type="email" placeholder="Email professionnel" required />
+          <input name="password" type="password" placeholder="Mot de passe (8 caractères min.)" minlength="8" required />
+          <button type="submit" class="dashboard-primary-button"><i class="bi bi-person-plus"></i> Créer l’accès</button>
+          <p id="adminFormMessage" class="form-message" role="status" hidden></p>
+        </form>
+        <div class="admin-list" id="adminList" hidden>
+          <h3>Administrateurs</h3>
+          <div id="adminListRows"></div>
+        </div>
+      </section>
+
+      <section class="settings-card">
+        <div>
+          <p class="dashboard-kicker">PARAMÈTRE DES DOSSIERS</p>
+          <h2 id="modificationStatus">Modifications ouvertes</h2>
+          <p id="modificationHelp">Les candidats peuvent encore modifier leurs informations.</p>
+        </div>
+        <button type="button" id="toggleModifications" class="dashboard-primary-button">
+          <i class="bi bi-lock"></i> Clôturer les modifications
+        </button>
+        <div class="settings-divider"></div>
+        <div>
+          <p class="dashboard-kicker">ACCÈS AUX CANDIDATURES</p>
+          <h2 id="registrationStatus">Inscriptions ouvertes</h2>
+          <p id="registrationHelp">Les nouveaux candidats peuvent créer un dossier.</p>
+        </div>
+        <button type="button" id="toggleRegistrations" class="dashboard-primary-button">
+          <i class="bi bi-door-closed"></i> Clôturer les inscriptions
+        </button>
+      </section>
+
+      <section class="settings-card convocation-settings-card">
+        <div>
+          <p class="dashboard-kicker">ADMISSION 2026</p>
+          <h2>Convocations</h2>
+          <p>Générez les convocations officielles pour tous les dossiers validés.</p>
+        </div>
+        <form id="compositionForm" class="composition-form">
+          <label>Date de composition
+            <input id="compositionDate" type="date" required />
+          </label>
+          <label>Centre de composition
+            <input id="compositionCentre" type="text" placeholder="EMSP - Abidjan" required />
+          </label>
+          <button type="submit" class="dashboard-primary-button">Enregistrer les paramètres</button>
+          <p id="compositionMessage" class="form-message" role="status" hidden></p>
+        </form>
+        <div class="convocation-actions">
+          <button type="button" id="generateConvocations" class="dashboard-primary-button">
+            <i class="bi bi-file-earmark-pdf"></i> Générer les convocations PDF
+          </button>
+          <p id="convocationMessage" class="form-message" role="status" hidden></p>
+        </div>
+      </section>
+
+      <section class="settings-card results-import-card">
+        <div>
+          <p class="dashboard-kicker">PUBLICATION AUTOMATISÉE</p>
+          <h2>Importer les résultats</h2>
+          <p>Téléchargez le modèle, complétez-le puis importez-le pour publier les résultats en masse.</p>
+        </div>
+        <div class="results-import-actions">
+          <a class="refresh-button" href="/api/admin/results/template.xlsx" download><i class="bi bi-file-earmark-excel"></i> Télécharger le modèle</a>
+          <form id="resultsImportForm">
+            <input type="file" name="results_file" accept=".xlsx,.xlsm" required />
+            <button type="submit" class="dashboard-primary-button"><i class="bi bi-upload"></i> Importer et publier</button>
+          </form>
+          <p id="resultsImportMessage" class="form-message" role="status" hidden></p>
+        </div>
+      </section>
+    </main>
+
+    <div class="candidate-modal" id="candidateModal" hidden>
+      <div class="candidate-modal-backdrop" data-close-modal></div>
+      <section class="candidate-modal-card" role="dialog" aria-modal="true" aria-labelledby="candidateModalTitle">
+        <button type="button" class="modal-close" data-close-modal aria-label="Fermer">&times;</button>
+        <p class="dashboard-kicker">DOSSIER CANDIDAT</p>
+        <h2 id="candidateModalTitle">Détails du candidat</h2>
+        <div id="candidateDetails" class="candidate-details">Chargement…</div>
+        <div class="candidate-documents">
+          <h3>Documents déposés</h3>
+          <div id="candidateDocuments">Chargement…</div>
+        </div>
+        <form id="candidateResultsForm" class="results-admin-form">
+          <h3>Publier les résultats</h3>
+          <div class="results-admin-grid">
+            <label>Français<input name="note_francais_compo" type="number" min="0" max="20" step="0.01" /></label>
+            <label>Mathématiques<input name="note_math_compo" type="number" min="0" max="20" step="0.01" /></label>
+            <label>Anglais<input name="note_anglais_compo" type="number" min="0" max="20" step="0.01" /></label>
+            <label>Psychotechnique<input name="note_psycho_compo" type="number" min="0" max="20" step="0.01" /></label>
+            <label>Filière attribuée<input name="filiere_formation" type="text" /></label>
+            <label class="result-admitted"><input name="admis_concours" type="checkbox" value="1" /> Admis au concours</label>
+          </div>
+          <button type="submit" class="dashboard-primary-button"><i class="bi bi-send"></i> Publier les résultats</button>
+        </form>
+        <button type="button" id="validateCandidate" class="dashboard-primary-button">
+          <i class="bi bi-check-circle"></i> Valider le dossier
+        </button>
+        <button type="button" id="rejectCandidate" class="dashboard-danger-button">
+          <i class="bi bi-x-circle"></i> Refuser la candidature
+        </button>
+      </section>
+    </div>
+
+    <script src="/js/dashboard.js"></script>
+    <script src="/js/page-loader.js"></script>
+    <script src="/js/chatbot.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1580 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>EMSP - Portail d'inscription</title>
+    <link rel="icon" type="image/jpeg" href="/assets/emsp-logo.jfif" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- =========================================================
+         BOOTSTRAP
+    ========================================================== -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- =========================================================
+         BOOTSTRAP ICONS
+    ========================================================== -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- =========================================================
+         CSS PERSONNALISÉ
+    ========================================================== -->
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/page-loader.css" />
+    <link rel="stylesheet" href="css/chatbot.css" />
+  </head>
+
+  <body>
+    <div id="emspPageLoader" aria-label="Chargement de la plateforme">
+      <div class="page-loader-content"><svg class="page-loader-ring" viewBox="0 0 94 94" aria-hidden="true"><circle cx="47" cy="47" r="44" /></svg><img class="page-loader-logo" src="/assets/emsp-logo.jfif" alt="Logo EMSP" /><div class="page-loader-title">EMSP</div></div>
+    </div>
+    <div id="wrapper">
+      <!-- =========================================================
+         SIDEBAR
+    ========================================================== -->
+
+      <aside id="sidebar">
+        <!-- Logo -->
+
+        <div class="sidebar-header">
+          <a class="brand-home" href="/" aria-label="Retour à l’accueil EMSP">
+            <div class="logo">
+              <img src="/assets/emsp-logo.jfif" alt="Logo EMSP" />
+            </div>
+
+            <div>
+              <h5>École Multinationale Supérieure des Postes</h5>
+
+              <small> Portail d'inscription </small>
+            </div>
+          </a>
+        </div>
+
+        <div class="sidebar-separator"></div>
+
+        <!-- Menu -->
+
+        <nav class="sidebar-menu">
+          <!-- Informations générales -->
+
+          <a
+            href="#section-generale"
+            class="sidebar-link active"
+            data-section="section-generale"
+          >
+            <span class="step-number"> 1 </span>
+
+            <span class="sidebar-link-content">
+              <strong> Infos. générales </strong>
+
+              <small> Identité & contact </small>
+            </span>
+          </a>
+
+          <!-- BAC -->
+
+          <a
+            href="#section-bac"
+            class="sidebar-link"
+            data-section="section-bac"
+          >
+            <span class="step-number"> 2 </span>
+
+            <span class="sidebar-link-content">
+              <strong> BAC & choix </strong>
+
+              <small> Diplôme & filières </small>
+            </span>
+          </a>
+
+          <!-- Tuteurs -->
+
+          <a
+            href="#section-tuteurs"
+            class="sidebar-link"
+            data-section="section-tuteurs"
+          >
+            <span class="step-number"> 3 </span>
+
+            <span class="sidebar-link-content">
+              <strong> Tuteurs </strong>
+
+              <small> Parents / responsables </small>
+            </span>
+          </a>
+
+          <!-- Documents -->
+
+          <a
+            href="#section-documents"
+            class="sidebar-link"
+            data-section="section-documents"
+          >
+            <span class="step-number"> 4 </span>
+
+            <span class="sidebar-link-content">
+              <strong> Documents </strong>
+
+              <small> Pièces justificatives </small>
+            </span>
+          </a>
+
+          <div class="sidebar-divider"></div>
+
+          <!-- Convocation -->
+
+          <a
+            href="#section-convocation"
+            class="sidebar-link sidebar-link-convocation"
+            data-section="section-convocation"
+          >
+            <span class="step-number convocation-number">
+              <i class="bi bi-calendar-check"></i>
+            </span>
+
+            <span class="sidebar-link-content">
+              <strong> Convocation </strong>
+
+              <small> Centre & composition </small>
+            </span>
+          </a>
+
+          <a href="#section-resultats" class="sidebar-link sidebar-link-convocation" data-section="section-resultats">
+            <span class="step-number convocation-number"><i class="bi bi-award"></i></span>
+            <span class="sidebar-link-content">
+              <strong> Résultats </strong>
+              <small> Notes & admission </small>
+            </span>
+          </a>
+        </nav>
+
+        <!-- Footer sidebar -->
+
+        <div class="sidebar-footer">
+          <div>
+            <i class="bi bi-shield-check"></i>
+
+            <span> Espace sécurisé </span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- =========================================================
+         CONTENU PRINCIPAL
+    ========================================================== -->
+
+      <main id="main-content">
+        <!-- =====================================================
+             MENU HORIZONTAL
+        ====================================================== -->
+
+        <nav class="horizontal-menu">
+          <div class="horizontal-menu-inner">
+            <!-- Bouton mobile -->
+
+            <button type="button" id="sidebarToggle" class="sidebar-toggle">
+              <i class="bi bi-list"></i>
+            </button>
+
+            <!-- Logo mobile -->
+
+            <a class="mobile-brand" href="/" aria-label="Retour à l’accueil EMSP">
+              <img src="/assets/emsp-logo.jfif" alt="Logo EMSP" />
+
+              <strong> EMSP </strong>
+            </a>
+
+            <!-- Navigation -->
+
+            <div class="main-navigation">
+              <a href="/#admission" class="main-nav-link">
+                <i class="bi bi-info-circle"></i>
+
+                <span> Admission </span>
+              </a>
+
+              <a href="#section-generale" class="main-nav-link active">
+                <i class="bi bi-pencil-square"></i>
+
+                <span> Candidature </span>
+              </a>
+
+              <a href="/#admission" class="main-nav-link">
+                <i class="bi bi-award"></i>
+
+                <span> Parcours </span>
+              </a>
+
+              <a href="/contacts" class="main-nav-link">
+                <i class="bi bi-envelope"></i>
+
+                <span> Nous contacter </span>
+              </a>
+            </div>
+
+            <!-- Profil -->
+
+            <div class="dropdown user-menu">
+              <button
+                class="user-profile-button dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <span class="user-icon">
+                  <i class="bi bi-person-fill"></i>
+                </span>
+
+                <span id="userName"> Candidat </span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <div class="user-dropdown-header">
+                    <div class="user-dropdown-icon">
+                      <i class="bi bi-person-fill"></i>
+                    </div>
+
+                    <div>
+                      <strong> Mon compte </strong>
+
+                      <small id="userEmail"> candidat@email.com </small>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+
+                <li>
+                  <a href="#" class="dropdown-item">
+                    <i class="bi bi-person me-2"></i>
+
+                    Modifier mon profil
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    id="logoutButton"
+                    class="dropdown-item text-danger"
+                  >
+                    <i class="bi bi-box-arrow-right me-2"></i>
+
+                    Déconnexion
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- =====================================================
+             CONTENU
+        ====================================================== -->
+
+        <div class="content-container">
+          <!-- =================================================
+                 EN-TÊTE
+            ================================================== -->
+
+          <!-- =================================================
+                 FORMULAIRE GLOBAL
+            ================================================== -->
+
+          <form
+            id="inscriptionForm"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <!-- =================================================
+                     SECTION 1
+                ================================================== -->
+
+            <section id="section-generale" class="form-section active-section">
+              <!-- Titre section -->
+
+              <div class="section-title">
+                <div class="section-icon">
+                  <i class="bi bi-person-vcard"></i>
+                </div>
+
+                <div>
+                  <h3>Informations générales</h3>
+                </div>
+              </div>
+
+              <!-- Informations administratives -->
+
+              <div class="card form-card mb-4">
+                <div class="card-header">
+                  <i class="bi bi-folder2-open"></i>
+
+                  Informations administratives
+                </div>
+
+                <div class="card-body">
+                  <div class="row g-3">
+                    <!-- Numéro dossier -->
+
+                    <div class="col-lg-3 col-md-6">
+                      <label class="form-label"> Numéro de dossier </label>
+
+                      <div class="input-group">
+                        <span class="input-group-text">
+                          <i class="bi bi-folder2"></i>
+                        </span>
+
+                        <input
+                          type="text"
+                          id="numeroDossier"
+                          name="numero_dossier"
+                          class="form-control"
+                          readonly
+                        />
+                      </div>
+
+                      <small class="text-muted"> Généré automatiquement </small>
+                    </div>
+
+                    <!-- Code Trésor -->
+
+                    <div class="col-lg-3 col-md-6">
+                      <label class="form-label"> Code Trésor Pay </label>
+
+                      <div class="input-group">
+                        <span class="input-group-text">
+                          <i class="bi bi-credit-card"></i>
+                        </span>
+
+                        <input
+                          type="text"
+                          id="codeTresorPay"
+                          name="code_tresor_pay"
+                          class="form-control"
+                          placeholder="Code Trésor Pay"
+                        />
+                      </div>
+                      <small class="text-muted">
+                        Renseignez obligatoirement un paiement
+                      </small>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                      <label class="form-label" for="emailCandidat">
+                        Adresse email <span class="required">*</span>
+                      </label>
+
+                      <input
+                        type="email"
+                        id="emailCandidat"
+                        name="email"
+                        class="form-control"
+                        autocomplete="email"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                      <label class="form-label" for="passwordCandidat">
+                        Mot de passe <span class="required">*</span>
+                      </label>
+
+                      <input
+                        type="password"
+                        id="passwordCandidat"
+                        name="password"
+                        class="form-control"
+                        minlength="8"
+                        autocomplete="new-password"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Identité -->
+
+              <div class="card form-card mb-4">
+                <div class="card-header">
+                  <i class="bi bi-person"></i>
+
+                  Identité du candidat
+                </div>
+
+                <div class="card-body">
+                  <div class="row g-3">
+                    <!-- Nom -->
+
+                    <div class="col-lg-4 col-md-6">
+                      <label class="form-label">
+                        Nom
+                        <span class="required">*</span>
+                      </label>
+
+                      <input
+                        type="text"
+                        name="nom"
+                        class="form-control"
+                        required
+                      />
+                    </div>
+
+                    <!-- Prénoms -->
+
+                    <div class="col-lg-5 col-md-6">
+                      <label class="form-label">
+                        Prénoms
+                        <span class="required">*</span>
+                      </label>
+
+                      <input
+                        type="text"
+                        name="prenoms"
+                        class="form-control"
+                        required
+                      />
+                    </div>
+
+                    <!-- Sexe -->
+
+                    <div class="col-lg-3 col-md-4">
+                      <label class="form-label">
+                        Sexe
+                        <span class="required">*</span>
+                      </label>
+
+                      <select name="sexe" class="form-select" required>
+                        <option value="">Sélectionner</option>
+
+                        <option value="M">Masculin</option>
+
+                        <option value="F">Féminin</option>
+                      </select>
+                    </div>
+
+                    <!-- Date naissance -->
+
+                    <div class="col-lg-3 col-md-4">
+                      <label class="form-label">
+                        Date de naissance
+                        <span class="required">*</span>
+                      </label>
+
+                      <input
+                        type="date"
+                        name="date_naissance"
+                        class="form-control"
+                        required
+                      />
+                    </div>
+
+                    <!-- Lieu -->
+
+                    <div class="col-lg-4 col-md-4">
+                      <label class="form-label"> Lieu de naissance </label>
+
+                      <input
+                        type="text"
+                        name="lieu_naissance"
+                        class="form-control"
+                      />
+                    </div>
+
+                    <!-- Nationalité -->
+
+                    <div class="col-lg-5 col-md-6">
+                      <label class="form-label"> Nationalité </label>
+
+                      <input
+                        type="text"
+                        name="nationalite"
+                        class="form-control"
+                        value="Ivoirienne"
+                      />
+                    </div>
+
+                    <!-- Téléphone -->
+
+                    <div class="col-lg-4 col-md-6">
+                      <label class="form-label">
+                        Téléphone
+                        <span class="required">*</span>
+                      </label>
+
+                      <input
+                        type="tel"
+                        name="telephone"
+                        class="form-control"
+                        placeholder="07 XX XX XX XX"
+                        required
+                      />
+                    </div>
+
+                    <!-- Nature pièce -->
+
+                    <div class="col-lg-4 col-md-6">
+                      <label class="form-label"> Nature de la pièce </label>
+
+                      <select name="nature_piece" class="form-select">
+                        <option value="">Sélectionner</option>
+
+                        <option value="CNI">CNI</option>
+
+                        <option value="ATTESTATION">
+                          Attestation d'identité
+                        </option>
+
+                        <option value="PASSEPORT">Passeport</option>
+
+                        <option value="CONSULAIRE">Carte consulaire</option>
+                      </select>
+                    </div>
+
+                    <!-- Numéro pièce -->
+
+                    <div class="col-lg-4 col-md-6">
+                      <label class="form-label"> Numéro de pièce </label>
+
+                      <input
+                        type="text"
+                        name="numero_piece"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Résidence -->
+
+              <div class="card form-card mb-4">
+                <div class="card-header">
+                  <i class="bi bi-geo-alt"></i>
+
+                  Résidence
+                </div>
+
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-lg-4 col-md-6">
+                      <label class="form-label"> Commune </label>
+
+                      <input type="text" name="commune" class="form-control" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                      <label class="form-label"> Ville </label>
+
+                      <input type="text" name="ville" class="form-control" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-12">
+                      <label class="form-label"> Adresse de résidence </label>
+
+                      <input type="text" name="adresse" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Navigation -->
+
+              <div class="navigation-buttons">
+                <div></div>
+
+                <div>
+                  <button
+                    type="button"
+                    class="btn btn-success me-2"
+                    id="validateGeneral"
+                  >
+                    <i class="bi bi-check-circle me-1"></i>
+
+                    Valider
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary next-btn"
+                    data-next="section-bac"
+                  >
+                    Suivant
+
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <!-- =================================================
+                     SECTION 2 : BAC
+                ================================================== -->
+
+            <section id="section-bac" class="form-section">
+              <div class="section-title">
+                <div class="section-icon">
+                  <i class="bi bi-mortarboard"></i>
+                </div>
+
+                <div>
+                  <h3>BAC & choix de formation</h3>
+                </div>
+              </div>
+
+              <!-- BAC -->
+
+              <div class="card form-card mb-4">
+                <div class="card-header">
+                  <i class="bi bi-award"></i>
+
+                  Informations sur le BAC
+                </div>
+
+                <div class="card-body">
+                  <div class="row g-3">
+                    <!-- Année -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                      <label class="form-label">
+                        Année d'obtention du BAC
+                        <span class="required">*</span>
+                      </label>
+
+                      <select
+                        name="annee_bac"
+                        id="anneeBac"
+                        class="form-select"
+                        required
+                      >
+                        <option value="">Sélectionner</option>
+                      </select>
+                    </div>
+
+                    <!-- Série -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                      <label class="form-label">
+                        Série du BAC
+                        <span class="required">*</span>
+                      </label>
+
+                      <select name="serie_bac" class="form-select" required>
+                        <option value="">Sélectionner</option>
+
+                        <option>A</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>E</option>
+                        <option>F</option>
+                        <option>G</option>
+                        <option>Autre</option>
+                      </select>
+                    </div>
+
+                    <!-- Numéro BAC -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                      <label class="form-label"> Numéro BAC </label>
+
+                      <input
+                        type="text"
+                        name="numero_bac"
+                        class="form-control"
+                      />
+                    </div>
+
+                    <!-- Numéro table -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                      <label class="form-label"> Numéro de table </label>
+
+                      <input
+                        type="text"
+                        name="numero_table"
+                        class="form-control"
+                      />
+                    </div>
+
+                    <!-- Mention -->
+
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                      <label class="form-label"> Mention </label>
+
+                      <select name="mention" class="form-select">
+                        <option value="">Sélectionner</option>
+
+                        <option>Passable</option>
+
+                        <option>Assez Bien</option>
+
+                        <option>Bien</option>
+
+                        <option>Très Bien</option>
+
+                        <option>Excellent</option>
+                      </select>
+                    </div>
+
+                    <!-- Moyenne -->
+
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                      <label class="form-label">
+                        Moyenne générale au BAC
+                      </label>
+
+                      <input
+                        type="number"
+                        name="moyenne_bac"
+                        class="form-control"
+                        min="0"
+                        max="20"
+                        step="0.01"
+                        placeholder="Ex. 14.50"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Notes -->
+
+              <div class="card form-card mb-4">
+                <div class="card-header">
+                  <i class="bi bi-bar-chart"></i>
+
+                  Notes obtenues au BAC
+                </div>
+
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-xl-3 col-md-6">
+                      <label class="form-label"> Mathématiques </label>
+
+                      <input
+                        type="number"
+                        name="note_math_bac"
+                        class="form-control"
+                        min="0"
+                        max="20"
+                        step="0.01"
+                      />
+                    </div>
+
+                    <div class="col-xl-3 col-md-6">
+                      <label class="form-label"> Physique </label>
+
+                      <input
+                        type="number"
+                        name="note_physique_bac"
+                        class="form-control"
+                        min="0"
+                        max="20"
+                        step="0.01"
+                      />
+                    </div>
+
+                    <div class="col-xl-3 col-md-6">
+                      <label class="form-label"> Français </label>
+
+                      <input
+                        type="number"
+                        name="note_francais_bac"
+                        class="form-control"
+                        min="0"
+                        max="20"
+                        step="0.01"
+                      />
+                    </div>
+
+                    <div class="col-xl-3 col-md-6">
+                      <label class="form-label"> Anglais </label>
+
+                      <input
+                        type="number"
+                        name="note_anglais_bac"
+                        class="form-control"
+                        min="0"
+                        max="20"
+                        step="0.01"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Choix de formation -->
+
+              <div class="card form-card mb-4">
+                <div class="card-header">
+                  <i class="bi bi-signpost-2"></i>
+
+                  Choix de formation
+                </div>
+
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-lg-6">
+                      <label class="form-label">
+                        Choix 1 – Filière
+                        <span class="required">*</span>
+                      </label>
+
+                      <select
+                        name="choix_1_filiere"
+                        class="form-select"
+                        required
+                      >
+                        <option value="">Sélectionner une filière</option>
+
+                        <option>DSER (Digitalisation des Services)</option>
+
+                        <option>FDIG (Finance Digitale)</option>
+
+                        <option>MDIG (Marketing Digital)</option>
+
+                        <option>LNUM (Logistique et Numérique)</option>
+
+                        <option>GARE (Gestion des Activités Réglementées de l’Économie)</option>
+                      </select>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <label class="form-label"> Choix 2 – Filière </label>
+
+                      <select name="choix_2_filiere" class="form-select">
+                        <option value="">Sélectionner une filière</option>
+
+                        <option>DSER (Digitalisation des Services)</option>
+
+                        <option>FDIG (Finance Digitale)</option>
+
+                        <option>MDIG (Marketing Digital)</option>
+
+                        <option>LNUM (Logistique et Numérique)</option>
+
+                        <option>GARE (Gestion des Activités Réglementées de l’Économie)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Navigation -->
+
+              <div class="navigation-buttons">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary prev-btn"
+                  data-prev="section-generale"
+                >
+                  <i class="bi bi-arrow-left"></i>
+
+                  Précédent
+                </button>
+
+                <div>
+                  <button
+                    type="button"
+                    class="btn btn-success me-2"
+                    id="validateBac"
+                  >
+                    <i class="bi bi-check-circle me-1"></i>
+
+                    Valider
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary next-btn"
+                    data-next="section-tuteurs"
+                  >
+                    Suivant
+
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <!-- =================================================
+                     SECTION 3 : TUTEURS
+                ================================================== -->
+
+            <section id="section-tuteurs" class="form-section">
+              <div class="section-title">
+                <div class="section-icon">
+                  <i class="bi bi-people"></i>
+                </div>
+
+                <div>
+                  <h3>Informations sur les tuteurs</h3>
+                </div>
+              </div>
+
+              <div class="row g-4">
+                <!-- =================================================
+                             TUTEUR 1
+                        ================================================== -->
+
+                <div class="col-xl-6">
+                  <div class="card form-card h-100">
+                    <div class="card-header">
+                      <span>
+                        <i class="bi bi-person-fill me-2"></i>
+
+                        Tuteur 1
+                      </span>
+
+                      <span class="badge text-bg-primary"> Principal </span>
+                    </div>
+
+                    <div class="card-body">
+                      <div class="row g-3">
+                        <div class="col-12">
+                          <label class="form-label"> Nom et prénoms </label>
+
+                          <input
+                            type="text"
+                            name="tuteur1_nom"
+                            class="form-control"
+                          />
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label"> Contact </label>
+
+                          <input
+                            type="tel"
+                            name="tuteur1_contact"
+                            class="form-control"
+                          />
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">
+                            Lien avec le candidat
+                          </label>
+
+                          <select name="tuteur1_lien" class="form-select">
+                            <option value="">Sélectionner</option>
+
+                            <option>Père</option>
+
+                            <option>Mère</option>
+
+                            <option>Tuteur</option>
+
+                            <option>Autre</option>
+                          </select>
+                        </div>
+
+                        <div class="col-12">
+                          <label class="form-label"> Résidence </label>
+
+                          <textarea
+                            name="tuteur1_residence"
+                            class="form-control"
+                            rows="3"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- =================================================
+                             TUTEUR 2
+                        ================================================== -->
+
+                <div class="col-xl-6">
+                  <div class="card form-card h-100">
+                    <div class="card-header">
+                      <span>
+                        <i class="bi bi-person-fill me-2"></i>
+
+                        Tuteur 2
+                      </span>
+
+                      <span class="badge text-bg-secondary"> Secondaire </span>
+                    </div>
+
+                    <div class="card-body">
+                      <div class="row g-3">
+                        <div class="col-12">
+                          <label class="form-label"> Nom et prénoms </label>
+
+                          <input
+                            type="text"
+                            name="tuteur2_nom"
+                            class="form-control"
+                          />
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label"> Contact </label>
+
+                          <input
+                            type="tel"
+                            name="tuteur2_contact"
+                            class="form-control"
+                          />
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="form-label">
+                            Lien avec le candidat
+                          </label>
+
+                          <select name="tuteur2_lien" class="form-select">
+                            <option value="">Sélectionner</option>
+
+                            <option>Père</option>
+
+                            <option>Mère</option>
+
+                            <option>Tuteur</option>
+
+                            <option>Autre</option>
+                          </select>
+                        </div>
+
+                        <div class="col-12">
+                          <label class="form-label"> Résidence </label>
+
+                          <textarea
+                            name="tuteur2_residence"
+                            class="form-control"
+                            rows="3"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Navigation -->
+
+              <div class="navigation-buttons mt-4">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary prev-btn"
+                  data-prev="section-bac"
+                >
+                  <i class="bi bi-arrow-left"></i>
+
+                  Précédent
+                </button>
+
+                <div>
+                  <button
+                    type="button"
+                    class="btn btn-success me-2"
+                    id="validateTuteurs"
+                  >
+                    <i class="bi bi-check-circle me-1"></i>
+
+                    Valider
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary next-btn"
+                    data-next="section-documents"
+                  >
+                    Suivant
+
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <!-- =================================================
+                     SECTION 4 : DOCUMENTS
+                ================================================== -->
+
+            <section id="section-documents" class="form-section">
+              <div class="section-title">
+                <div class="section-icon">
+                  <i class="bi bi-file-earmark-arrow-up"></i>
+                </div>
+
+                <div>
+                  <h3>Documents justificatifs</h3>
+                </div>
+              </div>
+
+              <!-- Information -->
+
+              <div class="alert alert-info d-flex align-items-center mb-4">
+                <i class="bi bi-info-circle-fill me-3"></i>
+
+                <div>
+                  <strong> Documents à fournir </strong>
+
+                  <div>
+                    Veillez à transmettre des documents lisibles et correctement
+                    numérisés(PDF, JPG ou PNG).
+                  </div>
+                </div>
+              </div>
+
+              <!-- Documents -->
+
+              <div class="row g-3">
+                <!-- Attestation -->
+
+                <div class="col-xl-4 col-lg-6">
+                  <label class="document-upload">
+                    <div class="document-icon">
+                      <i class="bi bi-file-earmark-pdf"></i>
+                    </div>
+
+                    <div class="document-content">
+                      <strong> Attestation du BAC </strong>
+                    </div>
+
+                    <input
+                      type="file"
+                      name="attestation"
+                      accept=".pdf,.jpg,.jpeg,.png"
+                    />
+                  </label>
+                </div>
+
+                <!-- Relevé -->
+
+                <div class="col-xl-4 col-lg-6">
+                  <label class="document-upload">
+                    <div class="document-icon">
+                      <i class="bi bi-file-earmark-spreadsheet"></i>
+                    </div>
+
+                    <div class="document-content">
+                      <strong> Relevé de notes du BAC </strong>
+                    </div>
+
+                    <input
+                      type="file"
+                      name="releve_bac"
+                      accept=".pdf,.jpg,.jpeg,.png"
+                    />
+                  </label>
+                </div>
+
+                <!-- CNI -->
+
+                <div class="col-xl-4 col-lg-6">
+                  <label class="document-upload">
+                    <div class="document-icon">
+                      <i class="bi bi-person-vcard"></i>
+                    </div>
+
+                    <div class="document-content">
+                      <strong> CNI / Attestation d'identité </strong>
+                    </div>
+
+                    <input
+                      type="file"
+                      name="cni"
+                      accept=".pdf,.jpg,.jpeg,.png"
+                    />
+                  </label>
+                </div>
+
+                <!-- Bulletin seconde -->
+
+                <div class="col-xl-4 col-lg-6">
+                  <label class="document-upload">
+                    <div class="document-icon">
+                      <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <div class="document-content">
+                      <strong> Bulletins de Seconde </strong>
+                    </div>
+
+                    <input
+                      type="file"
+                      name="bulletins_seconde"
+                      accept=".pdf,.jpg,.jpeg,.png"
+                    />
+                  </label>
+                </div>
+
+                <!-- Bulletin première -->
+
+                <div class="col-xl-4 col-lg-6">
+                  <label class="document-upload">
+                    <div class="document-icon">
+                      <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <div class="document-content">
+                      <strong> Bulletins de Première </strong>
+                    </div>
+
+                    <input
+                      type="file"
+                      name="bulletins_premiere"
+                      accept=".pdf,.jpg,.jpeg,.png"
+                    />
+                  </label>
+                </div>
+
+                <!-- Bulletin terminale -->
+
+                <div class="col-xl-4 col-lg-6">
+                  <label class="document-upload">
+                    <div class="document-icon">
+                      <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <div class="document-content">
+                      <strong> Bulletins de Terminale </strong>
+                    </div>
+
+                    <input
+                      type="file"
+                      name="bulletins_terminale"
+                      accept=".pdf,.jpg,.jpeg,.png"
+                    />
+                  </label>
+                </div>
+
+                <!-- Photo -->
+
+                <div class="col-xl-4 col-lg-6">
+                  <label class="document-upload">
+                    <div class="document-icon">
+                      <i class="bi bi-camera"></i>
+                    </div>
+
+                    <div class="document-content">
+                      <strong> Photo d'identité </strong>
+
+                      <small> JPG ou PNG </small>
+                    </div>
+
+                    <input type="file" name="photo" accept=".jpg,.jpeg,.png" />
+                  </label>
+                </div>
+
+                <!-- Lettre motivation -->
+
+                <div class="col-xl-4 col-lg-6">
+                  <label class="document-upload">
+                    <div class="document-icon">
+                      <i class="bi bi-envelope-paper"></i>
+                    </div>
+
+                    <div class="document-content">
+                      <strong> Lettre de motivation </strong>
+                    </div>
+
+                    <input
+                      type="file"
+                      name="lettre_motivation"
+                      accept=".pdf,.doc,.docx"
+                    />
+                  </label>
+                </div>
+
+                <!-- Acte naissance -->
+
+                <div class="col-xl-4 col-lg-6">
+                  <label class="document-upload">
+                    <div class="document-icon">
+                      <i class="bi bi-file-earmark-medical"></i>
+                    </div>
+
+                    <div class="document-content">
+                      <strong> Acte de naissance </strong>
+                    </div>
+
+                    <input
+                      type="file"
+                      name="acte_naissance"
+                      accept=".pdf,.jpg,.jpeg,.png"
+                    />
+                  </label>
+                </div>
+
+                <!-- CV -->
+
+                <div class="col-xl-4 col-lg-6">
+                  <label class="document-upload">
+                    <div class="document-icon">
+                      <i class="bi bi-file-earmark-person"></i>
+                    </div>
+
+                    <div class="document-content">
+                      <strong> Curriculum Vitae </strong>
+                    </div>
+
+                    <input type="file" name="cv" accept=".pdf,.doc,.docx" />
+                  </label>
+                </div>
+              </div>
+
+              <!-- Confirmation -->
+
+              <div class="card form-card mt-4">
+                <div class="card-body">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="confirmation"
+                      name="confirmation"
+                      required
+                    />
+
+                    <label class="form-check-label" for="confirmation">
+                      Je certifie l'exactitude des informations fournies et
+                      accepte les conditions d'inscription.
+
+                      <span class="required"> * </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Navigation -->
+
+              <div class="navigation-buttons mt-4">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary prev-btn"
+                  data-prev="section-tuteurs"
+                >
+                  <i class="bi bi-arrow-left"></i>
+
+                  Précédent
+                </button>
+
+                <div>
+                  <button
+                    type="button"
+                    class="btn btn-success me-2"
+                    id="validateDocuments"
+                  >
+                    <i class="bi bi-check-circle me-1"></i>
+
+                    Valider les documents
+                  </button>
+
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-lg"
+                    id="submitInscription"
+                  >
+                    <i class="bi bi-send me-1"></i>
+
+                    Valider l'inscription
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <!-- =================================================
+                     SECTION 5 : CONVOCATION
+                ================================================== -->
+
+            <section id="section-convocation" class="form-section">
+              <div class="section-title">
+                <div class="section-icon section-icon-success">
+                  <i class="bi bi-calendar-check"></i>
+                </div>
+
+                <div>
+                  <h3>Ma convocation</h3>
+
+                  <p>
+                    Consultez les informations relatives à votre composition.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row g-4">
+                <!-- Convocation principale -->
+
+                <div class="">
+                  <div class="convocation-card">
+                    <!-- Statut -->
+
+                    <div class="convocation-status">
+                      <div class="status-icon">
+                        <i class="bi bi-patch-check-fill"></i>
+                      </div>
+
+                      <div>
+                        <h4 id="convocationStatusTitle">Votre dossier est en cours de traitement</h4>
+
+                        <p id="convocationStatusMessage">
+                          Votre dossier est en cours d’examen par l’administration.
+                        </p>
+                        <p id="convocationNotice" class="convocation-notice" hidden>
+                          Vous êtes autorisé(e) à participer à la composition
+                          d'admission.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Informations -->
+
+                    <div class="row g-3 mt-2">
+                      <!-- Dossier -->
+
+                      <div class="col-md-4">
+                        <div class="convocation-info">
+                          <div class="convocation-info-icon">
+                            <i class="bi bi-folder2"></i>
+                          </div>
+
+                          <div>
+                            <span> Numéro de dossier </span>
+
+                            <strong id="convocationDossier"> — </strong>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Date -->
+
+                      <div class="col-md-4">
+                        <div class="convocation-info">
+                          <div class="convocation-info-icon">
+                            <i class="bi bi-calendar-event"></i>
+                          </div>
+
+                          <div>
+                            <span> Date de composition </span>
+
+                            <strong id="dateComposition">
+                              15 octobre 2026
+                            </strong>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Centre -->
+
+                      <div class="col-md-4">
+                        <div class="convocation-info">
+                          <div class="convocation-info-icon">
+                            <i class="bi bi-geo-alt"></i>
+                          </div>
+
+                          <div>
+                            <span> Centre de composition </span>
+
+                            <strong id="centreComposition">
+                              EMSP - Abidjan
+                            </strong>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Téléchargement -->
+
+                    <div class="convocation-download" id="convocationDownloadBox">
+                      <div>
+                        <i class="bi bi-file-earmark-pdf"></i>
+
+                        <div>
+                          <strong> Convocation officielle </strong>
+
+                          <small id="convocationDownloadLabel">Document PDF</small>
+                        </div>
+                      </div>
+
+                      <a
+                        href="documents/convocation.pdf"
+                        id="downloadConvocation"
+                        class="btn btn-primary"
+                        download
+                      >
+                        <i class="bi bi-download me-2"></i>
+
+                        Télécharger
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section id="section-resultats" class="form-section">
+              <div class="section-title">
+                <div class="section-icon section-icon-success"><i class="bi bi-award"></i></div>
+                <div>
+                  <h3>Mes résultats</h3>
+                  <p>Consultez vos notes après la composition et votre décision d’admission.</p>
+                </div>
+              </div>
+              <div id="resultsPending" class="convocation-card">
+                <div class="convocation-status">
+                  <div class="status-icon"><i class="bi bi-hourglass-split"></i></div>
+                  <div><h4>Résultats non disponibles</h4><p>Les résultats seront publiés après la composition.</p></div>
+                </div>
+              </div>
+              <div id="resultsPublished" class="convocation-card results-card" hidden>
+                <div class="convocation-status">
+                  <div class="status-icon"><i id="resultsIcon" class="bi bi-award-fill"></i></div>
+                  <div><h4 id="resultsTitle">Résultats publiés</h4><p id="resultsMessage"></p></div>
+                </div>
+                <div class="results-grid">
+                  <div><span>Français</span><strong id="resultFrancais">—</strong></div>
+                  <div><span>Mathématiques</span><strong id="resultMath">—</strong></div>
+                  <div><span>Anglais</span><strong id="resultAnglais">—</strong></div>
+                  <div><span>Psychotechnique</span><strong id="resultPsycho">—</strong></div>
+                </div>
+                <p class="result-filiere">Filière attribuée : <strong id="resultFiliere">—</strong></p>
+              </div>
+            </section>
+          </form>
+        </div>
+
+        <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+
+        <footer>© 2026 EMSP - Portail d'inscription</footer>
+      </main>
+    </div>
+
+    <!-- =========================================================
+     JAVASCRIPT
+========================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/page-loader.js"></script>
+    <script src="js/chatbot.js"></script>
+  </body>
+</html>

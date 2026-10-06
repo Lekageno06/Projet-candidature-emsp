@@ -1,0 +1,12 @@
+[project]
+name = "projet-candidature-emsp"
+version = "0.1.0"
+requires-python = ">=3.9"
+package-mode = false
+dependencies = [
+    "flask",
+    # ajoute ici tes autres dépendances (flask-cors, etc.)
+]
+
+[tool.vercel]
+entrypoint = "back_end.app:app"
