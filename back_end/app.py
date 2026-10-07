@@ -84,11 +84,11 @@ REQUIRED_CANDIDATE_FIELDS = (
 
 def get_connection():
     return mysql.connector.connect(
-        host=os.getenv("DB_HOST", "sql312.infinityfree.com"),
-        port=int(os.getenv("DB_PORT", "3306")),
-        user=os.getenv("DB_USER", "if0_42066052"),
-        password=os.getenv("DB_PASSWORD", "LeKageNo122006"),
-        database=os.getenv("DB_NAME", "if0_42066052_emsp2"),
+        host=os.getenv("DB_HOST", "shinkansen.proxy.rlwy.net"),
+        port=int(os.getenv("DB_PORT", "27090")),
+        user=os.getenv("DB_USER", "root"),
+        password=os.getenv("DB_PASSWORD", "OPLdbMjPyevCyIFGDDGdOzwGciXTlzaf"),
+        database=os.getenv("DB_NAME", "railway"),
         charset="utf8mb4",
     )
 
